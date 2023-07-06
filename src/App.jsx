@@ -11,6 +11,14 @@ const App = () => {
       {
         marks > 50 ? 'Passed' : 'Failed'
       }
+      {
+        (() => {
+          let a = 10;
+          let b = 20;
+          let c = a + b;
+          return <h1>{c}</h1>
+        })()
+      }
     </div>
   )
 }
