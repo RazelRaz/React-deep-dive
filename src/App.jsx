@@ -3,6 +3,7 @@
 const App = () => {
 
   let marks = 90;
+  let listItem = ["A", "B", "C", "D"]
 
   return (
     <div>
@@ -19,6 +20,15 @@ const App = () => {
           return <h1>{c}</h1>
         })()
       }
+
+      <ul>
+        {
+          listItem.map((item) => {
+            return <li key=''>{item}</li>
+          })
+        }
+      </ul>
+      
     </div>
   )
 }
