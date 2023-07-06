@@ -1,10 +1,11 @@
 
-function App() {
 
+const App = () => {
   return (
-    <>
-      <h1>React App</h1>
-    </>
+    <div>
+      <button className="btn btn-success">Im Button</button>
+      <button className="btn btn-danger">Danger</button>
+    </div>
   )
 }
 
