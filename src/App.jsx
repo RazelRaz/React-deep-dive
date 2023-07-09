@@ -29,6 +29,10 @@ const App = () => {
     city: 'sylhet'
   }
 
+  const BtnClicked = () => {
+    alert('Clcked button')
+  }
+
   return (
     <div>
       <Login></Login>
@@ -71,7 +75,7 @@ const App = () => {
 
       <Demo item={itemObj}></Demo>
       <ContactForm></ContactForm>
-      <Footer></Footer>
+      <Footer BtnClicked={BtnClicked}></Footer>
     </div>
   )
 }

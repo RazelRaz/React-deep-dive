@@ -1,9 +1,10 @@
 
 
-const Footer = () => {
+const Footer = ({BtnClicked}) => {
     return (
         <div>
-            <p>Copyright</p>
+            <button onClick={BtnClicked}>Click</button>
+            <p>Copyright </p>
         </div>
     );
 };
