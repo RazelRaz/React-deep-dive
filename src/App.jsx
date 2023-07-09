@@ -23,6 +23,11 @@ const App = () => {
     console.log(text);
   }
 
+  let itemObj = {
+    name: 'Razel',
+    age: 31,
+    city: 'sylhet'
+  }
 
   return (
     <div>
@@ -64,7 +69,7 @@ const App = () => {
         </form>
       </div>
 
-      <Demo></Demo>
+      <Demo item={itemObj}></Demo>
       <ContactForm></ContactForm>
       <Footer></Footer>
     </div>
