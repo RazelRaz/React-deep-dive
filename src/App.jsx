@@ -1,9 +1,15 @@
+import Clock from "./components/Clock";
 
 
 const App = () => {
 
   let marks = 90;
-  let listItem = ["A", "B", "C", "D"]
+  let listItem = ["A", "B", "C", "D"];
+  let isLogin = true;
+
+  const handleClick = (text) => {
+    console.log(text);
+  } 
 
   return (
     <div>
@@ -27,8 +33,14 @@ const App = () => {
             return <li key=''>{item}</li>
           })
         }
+        {
+          isLogin && <button>Dashboard</button>
+        }
       </ul>
-      
+      <Clock locale="bn-BD"></Clock>
+      <div>
+        <button onClick={() => handleClick('Hellooooooooo')}>CHange Language</button>
+      </div>
     </div>
   )
 }
