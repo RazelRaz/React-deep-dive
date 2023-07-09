@@ -4,6 +4,7 @@ import Demo from "./components/Demo";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
+import Login from "./components/Login";
 
 
 
@@ -22,10 +23,12 @@ const App = () => {
     console.log(text);
   }
 
+
   return (
     <div>
+      <Login></Login>
       <Header></Header>
-      <Hero></Hero>
+      <Hero title='Learn React'></Hero>
       <button className="btn btn-success">Im Button</button>
       <button className="btn btn-danger">Danger</button>
       {
