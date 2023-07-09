@@ -1,10 +1,18 @@
 
 
 const ContactForm = () => {
+
+    const postFormData = (event) => {
+        event.preventDefault()
+        alert('Form Submitted')
+    }
+
     return (
         <div>
-            <input type="text" />
-            <button type="submit">Submit</button>
+            <form action="" onSubmit={postFormData}>
+                <input type="text" />
+                <button type="submit">Submit</button>
+            </form>
         </div>
     );
 };
