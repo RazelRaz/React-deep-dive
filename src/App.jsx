@@ -1,4 +1,10 @@
 import Clock from "./components/Clock";
+import ContactForm from "./components/ContactForm";
+import Demo from "./components/Demo";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+import Hero from "./components/Hero";
+
 
 
 const App = () => {
@@ -9,10 +15,17 @@ const App = () => {
 
   const handleClick = (text) => {
     console.log(text);
-  } 
+  }
+
+  const handleSubmit = (e, text) => {
+    e.preventDefault();
+    console.log(text);
+  }
 
   return (
     <div>
+      <Header></Header>
+      <Hero></Hero>
       <button className="btn btn-success">Im Button</button>
       <button className="btn btn-danger">Danger</button>
       {
@@ -29,8 +42,8 @@ const App = () => {
 
       <ul>
         {
-          listItem.map((item) => {
-            return <li key=''>{item}</li>
+          listItem.map((item, key) => {
+            return <li key={key}>{item}</li>
           })
         }
         {
@@ -41,6 +54,16 @@ const App = () => {
       <div>
         <button onClick={() => handleClick('Hellooooooooo')}>CHange Language</button>
       </div>
+      <div>
+        <form onSubmit={(e) => handleSubmit(e, "hellooo from onsubmit")}>
+
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+
+      <Demo></Demo>
+      <ContactForm></ContactForm>
+      <Footer></Footer>
     </div>
   )
 }
